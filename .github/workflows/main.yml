@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    # - uses: WebAssembly/wit-abi-up-to-date@v6
-    #   with:
-    #     wit-abi-tag: wit-abi-0.6.0
+    - uses: WebAssembly/wit-abi-up-to-date@v17
+      with:
+        wit-bindgen: '0.34.0'
+        worlds: 'imports imports-request-reply messaging-core messaging-request-reply'
